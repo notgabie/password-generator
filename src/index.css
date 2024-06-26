@@ -12,6 +12,14 @@
 @layer base {
   :root {
     --neon-green: #a4ffaf;
+    --very-dark-grey: #18171f;
+    --dark-grey: #24232c;
+    --grey: #817d92;
+    --almost-white: #e6e5ea;
+    --neon-green: #a4ffaf;
+    --red-var: #f64a4a;
+    --orange-var: #fb7c58;
+    --yellow-var: #f8cd65;
   }
 
   html,
@@ -36,6 +44,7 @@
     @apply bg-dark-grey w-full p-4;
   }
 
+  /* Checkbox styling */
   .custom-checkbox {
     appearance: none;
     width: 20px;
@@ -65,26 +74,32 @@
     transform: translate(-50%, -50%);
   }
 
-  .btn.flash {
-    animation: flash 1s linear;
-  }
-
+  /* Scrollbar */
   ::-webkit-scrollbar {
     width: 9px;
     height: 10px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
     background-color: var(--neon-green);
     border-radius: 20px;
     border: 1px solid var(--neon-green);
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: transparent;
     cursor: pointer;
-}
+  }
+
+  /* Animations */
+  .btn.flash {
+    animation: flash 1s linear;
+  }
+
   @keyframes flash {
     0% {
       background-color: transparent;
@@ -99,6 +114,11 @@
 }
 
 @layer components {
+  /* Buttons */
+  .btn {
+    @apply bg-neon-green flex p-4 m-2  text-very-dark-grey hover:text-neon-green hover:bg-transparent border-2 arrow-right border-transparent hover:border-neon-green;
+  }
+
   .copy-button:hover svg path {
     @apply fill-white cursor-pointer;
   }
@@ -107,6 +127,11 @@
     @apply transform scale-95;
   }
 
+  .arrow-right:hover svg path {
+    @apply fill-neon-green;
+  }
+
+  /* Strength bars */
   .strength-bar {
     @apply h-7 w-[10px] bg-very-dark-grey border-[2px];
   }
@@ -125,13 +150,5 @@
 
   .strength-bar.filled-strong {
     background-color: green;
-  }
-
-  .arrow-right:hover svg path {
-    @apply fill-neon-green;
-  }
-
-  .btn {
-    @apply bg-neon-green flex p-4 m-2  text-very-dark-grey hover:text-neon-green hover:bg-transparent border-2 arrow-right border-transparent hover:border-neon-green;
   }
 }
