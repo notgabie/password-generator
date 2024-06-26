@@ -3,12 +3,10 @@ import { password } from "../store";
 import { copyToClipboard } from "./password";
 import { IconCopy } from "./ui/icons";
 
-export function TextField(): JSX.Element{
+export function TextField(): JSX.Element {
   return (
     <div class="container flex justify-between items-center p-7">
-      <h2
-        class='heading-large max-w-[93%] overflow-x-auto whitespace-nowrap text-almost-white '
-      >
+      <h2 class="heading-large max-w-[93%] overflow-x-auto whitespace-nowrap text-almost-white ">
         {password.password}
       </h2>
       <div
@@ -21,6 +19,7 @@ export function TextField(): JSX.Element{
           class="copy-button"
           onClick={() => copyToClipboard(password.password)}
         >
+          <span class="sr-only">Copy to clipboard</span>
           <IconCopy />
         </button>
       </div>
