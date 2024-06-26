@@ -18,7 +18,7 @@ export function Slider() {
         max="64"
         value="12"
         step="1"
-        class="w-full accent-neon-green"
+        class="w-full slider slider-progress"
         onChange={(e) =>
           setPassword("selections", (current) => ({
             ...current,
