@@ -37,7 +37,8 @@ export function Checkboxes(): JSX.Element {
       {selections.map((selection) => (
         <div class="flex items-center gap-6">
           <input
-            role="checkbox"
+            aria-checked={password.selections[selection.name]}
+            checked={password.selections[selection.name]}
             type="checkbox"
             id={selection.name}
             class="custom-checkbox"
