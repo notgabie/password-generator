@@ -33,7 +33,7 @@ export function Checkboxes(): JSX.Element {
   };
 
   return (
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 mt-5">
       {selections.map((selection) => (
         <div class="flex items-center gap-6">
           <input

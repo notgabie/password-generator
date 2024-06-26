@@ -36,7 +36,7 @@ export function UserSelections(): JSX.Element {
   };
 
   return (
-    <div class="container flex flex-col gap-3">
+    <div class="container flex flex-col gap-3 p-5">
       <Slider />
       <Checkboxes />
       <PasswordStrength />

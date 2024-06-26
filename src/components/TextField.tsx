@@ -5,11 +5,9 @@ import { IconCopy } from "./ui/icons";
 
 export function TextField(): JSX.Element{
   return (
-    <div class="container flex justify-between items-center">
+    <div class="container flex justify-between items-center p-7">
       <span
-        class={`heading-large max-w-[93%] overflow-x-auto whitespace-nowrap ${
-          password.generated ? "text-almost-white" : "text-grey"
-        }`}
+        class='heading-large max-w-[93%] overflow-x-auto whitespace-nowrap text-almost-white '
       >
         {password.password}
       </span>
