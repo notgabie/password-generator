@@ -85,14 +85,14 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: var(--almost-white);
+    background-color: var(--neon-green);
     border-radius: 20px;
-    border: 1px solid var(--almost-white);
+    border: 1px solid var(--nron-green);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: transparent;
     cursor: pointer;
+    border-color: var(--very-dark-grey);
   }
 
   /* Slider input from https://toughengineer.github.io/demo/slider-styler */
