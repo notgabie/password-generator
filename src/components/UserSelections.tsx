@@ -2,13 +2,13 @@ import { createSignal } from "solid-js";
 import { password, setPassword } from "../store";
 import { PasswordStrength } from "./Strength";
 import { generatePassword } from "./password";
-import { Checkboxes } from "./ui/Checkboxes";
-import { Slider } from "./ui/Slider";
+import { Checkboxes } from "./Checkboxes";
+import { Slider } from "./Slider";
 import { IconArrowRight } from "./ui/icons";
 
 export function UserSelections() {
   const [showError, setShowError] = createSignal(false);
-  
+
   const handleGenerateClick = () => {
     const {
       includeLowercase,
@@ -45,7 +45,9 @@ export function UserSelections() {
         onClick={handleGenerateClick}
       >
         {password.noSelections ? (
-          <span class="mx-auto" role="alert">Please make a selection!</span>
+          <span class="mx-auto" role="alert">
+            Please make a selection!
+          </span>
         ) : (
           <span class="flex mx-auto items-center gap-4">
             Generate <IconArrowRight />

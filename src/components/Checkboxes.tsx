@@ -1,4 +1,4 @@
-import { password, setPassword } from "../../store";
+import { password, setPassword } from "../store";
 
 const selections = [
   { name: "includeUppercase", label: "Include uppercase letters" },

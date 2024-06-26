@@ -11,7 +11,10 @@ export function TextField() {
       >
         {password.password}
       </span>
-      <div class={`flex uppercase text-neon-green gap-3 transition-all ease-in-out duration-150`} role="alert">
+      <div
+        class={`flex uppercase text-neon-green gap-3 transition-all ease-in-out duration-150`}
+        role="alert"
+      >
         {password.copyStatus === "success" && <span>Copied</span>}
         {password.copyStatus === "error" && <span>Error</span>}
         <button
