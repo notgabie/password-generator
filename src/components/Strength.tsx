@@ -10,7 +10,7 @@ export function PasswordStrength() {
       <div class="flex gap-2 items-center">
         {password.generated && (
           <span class="uppercase heading-medium text-almost-white">
-            {password.strength === 0 ? "Too Weak!" : password.strength === 1 ? "Weak" : password.strength === 2 ? "Medium" : "Strong"}
+            {password.strength === 1 ? "Too Weak!" : password.strength === 2 ? "Weak" : password.strength === 3 ? "Medium" : "Strong"}
           </span>
         )}
         <div class="flex gap-2">
