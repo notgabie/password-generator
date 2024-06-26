@@ -20,7 +20,6 @@ export function TextField(): JSX.Element{
         {password.copyStatus === "success" && <span>Copied</span>}
         {password.copyStatus === "error" && <span>Error</span>}
         <button
-          role="button"
           class="copy-button"
           onClick={() => copyToClipboard(password.password)}
         >

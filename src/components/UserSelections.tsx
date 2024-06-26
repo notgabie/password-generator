@@ -49,7 +49,7 @@ export function UserSelections(): JSX.Element {
             Please make a selection!
           </span>
         ) : (
-          <span class="flex mx-auto items-center gap-4">
+          <span class="flex mx-auto items-center gap-4 uppercase">
             Generate <IconArrowRight />
           </span>
         )}

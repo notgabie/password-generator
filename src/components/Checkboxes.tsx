@@ -33,10 +33,11 @@ export function Checkboxes(): JSX.Element {
   };
 
   return (
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-5">
       {selections.map((selection) => (
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-6">
           <input
+            role="checkbox"
             type="checkbox"
             class="custom-checkbox"
             onChange={(e) => handleCheckboxChange(e, selection.name)}

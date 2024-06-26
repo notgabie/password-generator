@@ -13,6 +13,7 @@ export function Slider(): JSX.Element{
         </span>
       </div>
       <input
+        role="slider"
         type="range"
         min="8"
         id="passwordLength"
