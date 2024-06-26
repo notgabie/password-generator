@@ -1,9 +1,8 @@
+import { JSX } from "solid-js";
 import { password } from "../store";
 import { getStrengthClass } from "./password";
 
-const strengths = [];
-
-export function PasswordStrength() {
+export function PasswordStrength(): JSX.Element{
   return (
     <div class="bg-very-dark-grey flex justify-between items-center px-8 py-5">
       <span class="text-grey uppercase">Strength</span>

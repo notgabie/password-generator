@@ -1,7 +1,9 @@
+import { JSX } from "solid-js";
 import { password } from "../store";
 import { copyToClipboard } from "./password";
 import { IconCopy } from "./ui/icons";
-export function TextField() {
+
+export function TextField(): JSX.Element{
   return (
     <div class="container flex justify-between items-center">
       <span

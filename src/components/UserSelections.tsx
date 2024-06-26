@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { JSX, createSignal } from "solid-js";
 import { password, setPassword } from "../store";
 import { PasswordStrength } from "./Strength";
 import { generatePassword } from "./password";
@@ -6,10 +6,10 @@ import { Checkboxes } from "./Checkboxes";
 import { Slider } from "./Slider";
 import { IconArrowRight } from "./ui/icons";
 
-export function UserSelections() {
+export function UserSelections(): JSX.Element {
   const [showError, setShowError] = createSignal(false);
 
-  const handleGenerateClick = () => {
+  const handleGenerateClick = (): void => {
     const {
       includeLowercase,
       includeUppercase,

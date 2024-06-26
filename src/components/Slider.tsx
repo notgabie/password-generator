@@ -1,6 +1,7 @@
+import { JSX } from "solid-js";
 import { password, setPassword } from "../store";
 
-export function Slider() {
+export function Slider(): JSX.Element{
   return (
     <div class="flex flex-col justify-between gap-3">
       <div class="flex justify-between items-center">

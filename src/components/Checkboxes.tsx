@@ -1,3 +1,4 @@
+import { JSX } from "solid-js";
 import { password, setPassword } from "../store";
 
 const selections = [
@@ -7,11 +8,14 @@ const selections = [
   { name: "includeSymbols", label: "Include symbols" },
 ];
 
-export function Checkboxes() {
-  const handleCheckboxChange = (e, name) => {
+export function Checkboxes(): JSX.Element {
+  const handleCheckboxChange = (
+    e: Event & { currentTarget: HTMLInputElement },
+    name: string
+  ) => {
     setPassword("selections", (current) => ({
       ...current,
-      [name]: e.target.checked,
+      [name]: (e.currentTarget as HTMLInputElement).checked,
     }));
 
     const {
