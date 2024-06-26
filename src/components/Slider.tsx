@@ -13,13 +13,15 @@ export function Slider(): JSX.Element{
         </span>
       </div>
       <input
-        role="slider"
         type="range"
         min="8"
         id="passwordLength"
         max="64"
         value="12"
         step="1"
+        aria-valuemin={8}
+        aria-valuemax={64}
+        aria-valuenow={password.selections.passwordLength}
         class="w-full slider slider-progress"
         onChange={(e) =>
           setPassword("selections", (current) => ({
