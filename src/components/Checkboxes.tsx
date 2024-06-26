@@ -39,10 +39,11 @@ export function Checkboxes(): JSX.Element {
           <input
             role="checkbox"
             type="checkbox"
+            id={selection.name}
             class="custom-checkbox"
             onChange={(e) => handleCheckboxChange(e, selection.name)}
           />
-          <label class="text-almost-white">{selection.label}</label>
+          <label class="text-almost-white" for={selection.name}>{selection.label}</label>
         </div>
       ))}
     </div>
