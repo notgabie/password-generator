@@ -45,11 +45,11 @@ export function UserSelections(): JSX.Element {
         onClick={handleGenerateClick}
       >
         {password.noSelections ? (
-          <span class="mx-auto" role="alert">
+          <span class="mx-auto font-semibold" role="alert">
             Please make a selection!
           </span>
         ) : (
-          <span class="flex mx-auto items-center gap-4 uppercase">
+          <span class="flex mx-auto items-center gap-6 uppercase font-semibold">
             Generate <IconArrowRight />
           </span>
         )}
